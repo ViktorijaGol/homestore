@@ -6,8 +6,9 @@ public class MyAccountPage extends BasePage {
     public MyAccountPage(WebDriver driver) { super(driver); }
 
     @FindBy(css = "#username")
-    WebElement usernameInput;
-    public void fillEmail(String username) { usernameInput.sendKeys(username); }
+    WebElement usernameOrEmailInput;
+    public void fillEmail(String email) { usernameOrEmailInput.sendKeys(email); }
+    public void fillUsername(String username) { usernameOrEmailInput.sendKeys(username); }
 
     @FindBy(css = "#password")
     WebElement passwordInput;
@@ -22,7 +23,9 @@ public class MyAccountPage extends BasePage {
     public void clickLogin() { loginButton.click(); }
 
     @FindBy(css = "ul[role='alert']")
-    WebElement unknownEmailAlert;
+    WebElement unknownEmailOrUsernameAlert;
 
-    public String unknownEmailAdressError() { return unknownEmailAlert.getText(); }
+    public String unknownEmailAdressError() { return unknownEmailOrUsernameAlert.getText(); }
+
+    public String unknownUsernameError() { return unknownEmailOrUsernameAlert.getText(); }
 }
