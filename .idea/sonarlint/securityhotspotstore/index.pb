@@ -37,3 +37,5 @@ m
 =src/test/java/loginTest/UnssucessfulPasswordRecoveryTest.java,6/0/6032249189043e87fead11e9283c03250b66bfd9
 U
 %src/test/java/loginTest/BaseTest.java,3/9/39792d841df1424b1e5fd8de9d4f926cf3da485d
+m
+=src/test/java/loginTest/UnsuccessfulPasswordRecoveryTest.java,c/6/c661b3d1b6540389f354145d90dfe3fffb271626
