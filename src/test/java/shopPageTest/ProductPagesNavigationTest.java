@@ -10,7 +10,6 @@ public class ProductPagesNavigationTest extends BaseTest {
 
     String nextPage = "2";
     String previousPage = "1";
-
     @Test
     public void navigationWithArrowsTest() {
         shopPage = new ShopPage(driver);
@@ -19,6 +18,17 @@ public class ProductPagesNavigationTest extends BaseTest {
         assertThat(shopPage.redirectedTo()).contains(nextPage);
 
         shopPage.clickArrowBack();
+        assertThat(shopPage.redirectedTo()).contains(previousPage);
+    }
+
+    @Test
+    public void navigationWithNumbersTest() {
+        shopPage = new ShopPage(driver);
+
+        shopPage.clickPageNumber();
+        assertThat(shopPage.redirectedTo()).contains(nextPage);
+
+        shopPage.clickPageNumber();
         assertThat(shopPage.redirectedTo()).contains(previousPage);
     }
 }

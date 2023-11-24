@@ -18,4 +18,8 @@ public class ShopPage extends BasePage{
     @FindBy(xpath = "//span[@class='page-numbers current']")
     WebElement currentPage;
     public String redirectedTo() { return currentPage.getText(); }
+
+    @FindBy(xpath = "//a[@class='page-numbers']")
+    WebElement pageNumber;
+    public void clickPageNumber() { pageNumber.click(); }
 }

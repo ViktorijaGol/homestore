@@ -47,3 +47,5 @@ Q
 !src/main/java/pages/ShopPage.java,4/1/419727939f635e94b3ed8ac94f3a5ef3731022e7
 R
 "src/main/java/pages/ShopPage2.java,2/0/203a97ec0f27b4218bab71d74f7dd3194f071295
+a
+1src/test/java/shopPageTest/ProductSearchTest.java,5/a/5a1a1d4f9a331b6f788d162b105ca27e4b9d4354
