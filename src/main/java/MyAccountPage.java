@@ -29,5 +29,7 @@ public class MyAccountPage extends BasePage {
 
     public String unknownUsernameError() { return myAccountPageErrorAlert.getText(); }
 
-    public String usernameIsRequiredError() {  return myAccountPageErrorAlert.getText();}
+    public String usernameIsRequiredError() {  return myAccountPageErrorAlert.getText(); }
+
+    public String passwordIsRequiredError() { return myAccountPageErrorAlert.getText(); }
 }

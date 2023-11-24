@@ -15,6 +15,7 @@ public class LoginTest extends BaseTest {
             "Error: The username "+username+" is not registered on this site. " +
                     "If you are unsure of your username, try your email address instead.";
     String usernameIsRequiredText = "Error: Username is required.";
+    String passwordIsRequiredText = "Error: The password field is empty.";
 
     @Test
     public void unableToLoginWithInvalidEmailTest() {
@@ -63,5 +64,31 @@ public class LoginTest extends BaseTest {
         assertThat(myAccountPage.usernameIsRequiredError()).isEqualTo(usernameIsRequiredText);
     }
 
+    @Test
+    public void unableToLoginIfPasswordFieldLeftEmpty() {
+        myAccountPage = new MyAccountPage(driver);
+        headerBar = new HeaderBar(driver);
 
+        headerBar.clickMyAccount();
+
+        myAccountPage.fillUsername(username);
+
+        myAccountPage.checkRememberMe();
+        myAccountPage.clickLogin();
+
+        assertThat(myAccountPage.passwordIsRequiredError()).isEqualTo(passwordIsRequiredText);
+    }
+
+    @Test
+    public void unableToLoginIfEmailUsernameAndPasswordFieldsLeftEmpty() {
+        myAccountPage = new MyAccountPage(driver);
+        headerBar = new HeaderBar(driver);
+
+        headerBar.clickMyAccount();
+
+        myAccountPage.checkRememberMe();
+        myAccountPage.clickLogin();
+
+        assertThat(myAccountPage.usernameIsRequiredError()).isEqualTo(usernameIsRequiredText);
+    }
 }
