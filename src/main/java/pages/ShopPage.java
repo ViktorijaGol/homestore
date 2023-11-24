@@ -22,4 +22,17 @@ public class ShopPage extends BasePage{
     @FindBy(xpath = "//a[@class='page-numbers']")
     WebElement pageNumber;
     public void clickPageNumber() { pageNumber.click(); }
+
+    @FindBy(css = ".woocommerce-info.woocommerce-no-products-found")
+    WebElement noProductsFoundAlert;
+    public String noProductsWereFound() { return noProductsFoundAlert.getText(); }
+
+    @FindBy(css = ".woocommerce-products-header")
+    WebElement productsFoundHeader;
+    public String searchResults() { return productsFoundHeader.getText(); }
+
+    @FindBy(xpath = "//p[@class='woocommerce-result-count']")
+    WebElement resultCountParagraph;
+    public String resultsCount() { return resultCountParagraph.getText(); }
+
 }
