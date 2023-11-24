@@ -1,3 +1,4 @@
+import org.openqa.selenium.Beta;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,4 +33,8 @@ public class MyAccountPage extends BasePage {
     public String usernameIsRequiredError() {  return myAccountPageErrorAlert.getText(); }
 
     public String passwordIsRequiredError() { return myAccountPageErrorAlert.getText(); }
+
+    @FindBy(xpath = "//a[normalize-space()='Lost your password?']")
+    WebElement lostYourPasswordLink;
+    public void clickLostYourPassword() { lostYourPasswordLink.click(); }
 }

@@ -15,3 +15,7 @@ L
 src/test/java/LoginTest.java,d/6/d6cd1323b46eaeae5c5e2a440f39a3d610dabf0d
 L
 src/main/java/HeaderBar.java,8/9/8958972822eb2ee6bb8d15e064c7f349e6b380f9
+X
+(src/test/java/UnsuccessfulLoginTest.java,1/3/137ea70b3d17af16c1bc6c7476347f56c4b9fca1
+c
+3src/test/java/UnssucessfulPasswordRecoveryTest.java,1/3/139937494ed5538845c2330915498567ba64f00b
