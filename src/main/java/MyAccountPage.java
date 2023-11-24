@@ -23,9 +23,11 @@ public class MyAccountPage extends BasePage {
     public void clickLogin() { loginButton.click(); }
 
     @FindBy(css = "ul[role='alert']")
-    WebElement unknownEmailOrUsernameAlert;
+    WebElement myAccountPageErrorAlert;
 
-    public String unknownEmailAdressError() { return unknownEmailOrUsernameAlert.getText(); }
+    public String unknownEmailAdressError() { return myAccountPageErrorAlert.getText(); }
 
-    public String unknownUsernameError() { return unknownEmailOrUsernameAlert.getText(); }
+    public String unknownUsernameError() { return myAccountPageErrorAlert.getText(); }
+
+    public String usernameIsRequiredError() {  return myAccountPageErrorAlert.getText();}
 }

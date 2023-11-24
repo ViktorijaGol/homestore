@@ -4,19 +4,20 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class LoginTest extends BaseTest {
-    HomePage homePage;
     MyAccountPage myAccountPage;
     HeaderBar headerBar;
 
     String email = "katinukai@gmail.com";
-    String username = "katinukai";
+    String username = "katinukai123";
     String password = "katinukai";
     String unknownEmailAdressText = "Unknown email address. Check again or try your username.";
-    String unknownUsernameText = "Error: The username "+username+" is not registered on this site. If you are unsure of your username, try your email address instead.";
+    String unknownUsernameText =
+            "Error: The username "+username+" is not registered on this site. " +
+                    "If you are unsure of your username, try your email address instead.";
+    String usernameIsRequiredText = "Error: Username is required.";
 
     @Test
     public void unableToLoginWithInvalidEmailTest() {
-        homePage = new HomePage(driver);
         myAccountPage = new MyAccountPage(driver);
         headerBar = new HeaderBar(driver);
 
@@ -33,7 +34,6 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void unableToLoginWithInvalidUsernameTest() {
-        homePage = new HomePage(driver);
         myAccountPage = new MyAccountPage(driver);
         headerBar = new HeaderBar(driver);
 
@@ -47,4 +47,21 @@ public class LoginTest extends BaseTest {
 
         assertThat(myAccountPage.unknownUsernameError()).isEqualTo(unknownUsernameText);
     }
+
+    @Test
+    public void unableToLoginIfUsernameEmailFieldLeftEmpty() {
+        myAccountPage = new MyAccountPage(driver);
+        headerBar = new HeaderBar(driver);
+
+        headerBar.clickMyAccount();
+
+        myAccountPage.fillPassword(password);
+
+        myAccountPage.checkRememberMe();
+        myAccountPage.clickLogin();
+
+        assertThat(myAccountPage.usernameIsRequiredError()).isEqualTo(usernameIsRequiredText);
+    }
+
+
 }
