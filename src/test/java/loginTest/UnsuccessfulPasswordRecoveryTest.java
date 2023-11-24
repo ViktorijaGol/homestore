@@ -18,7 +18,8 @@ public class UnsuccessfulPasswordRecoveryTest extends BaseTest {
     String email = "katinukai@gmail.com";
     String invalidUsernameOrEmailErrorText = "Invalid username or email.";
     String enterUsernameOrEmailErrorText = "Enter a username or email address.";
-    String passwordResetLimitExceededText = "You have exceeded the password reset limit. Please wait a few minutes and try again.";
+    String passwordResetLimitExceededText =
+            "You have exceeded the password reset limit. Please wait a few minutes and try again.";
 
     @Test
     public void unableToRecoverPasswordWithInvalidUsernameTest() {

@@ -27,13 +27,9 @@ public class MyAccountPage extends BasePage {
 
     @FindBy(css = "ul[role='alert']")
     WebElement myAccountPageErrorAlert;
-
     public String unknownEmailAdressError() { return myAccountPageErrorAlert.getText(); }
-
     public String unknownUsernameError() { return myAccountPageErrorAlert.getText(); }
-
     public String usernameIsRequiredError() {  return myAccountPageErrorAlert.getText(); }
-
     public String passwordIsRequiredError() { return myAccountPageErrorAlert.getText(); }
 
     @FindBy(xpath = "//a[normalize-space()='Lost your password?']")
