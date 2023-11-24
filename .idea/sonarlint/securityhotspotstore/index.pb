@@ -39,3 +39,11 @@ U
 %src/test/java/loginTest/BaseTest.java,3/9/39792d841df1424b1e5fd8de9d4f926cf3da485d
 m
 =src/test/java/loginTest/UnsuccessfulPasswordRecoveryTest.java,c/6/c661b3d1b6540389f354145d90dfe3fffb271626
+X
+(src/test/java/shopPageTest/BaseTest.java,e/3/e3d32a89ea5da52c74dd3c50209272a2d3e2bcb0
+j
+:src/test/java/shopPageTest/ProductPagesNavigationTest.java,3/7/379112b37446c872238e42391c76239db62c7c7c
+Q
+!src/main/java/pages/ShopPage.java,4/1/419727939f635e94b3ed8ac94f3a5ef3731022e7
+R
+"src/main/java/pages/ShopPage2.java,2/0/203a97ec0f27b4218bab71d74f7dd3194f071295

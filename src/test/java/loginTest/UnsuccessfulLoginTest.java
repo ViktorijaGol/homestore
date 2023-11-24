@@ -13,7 +13,7 @@ public class UnsuccessfulLoginTest extends BaseTest {
     String email = "katinukai@gmail.com";
     String username = "katinukai123";
     String password = "katinukai";
-    String unknownEmailAdressText = "Unknown email address. Check again or try your username.";
+    String unknownEmailAddressText = "Unknown email address. Check again or try your username.";
     String unknownUsernameText =
             "Error: The username "+username+" is not registered on this site. " +
                     "If you are unsure of your username, try your email address instead.";
@@ -33,7 +33,7 @@ public class UnsuccessfulLoginTest extends BaseTest {
         myAccountPage.checkRememberMe();
         myAccountPage.clickLogin();
 
-        assertThat(myAccountPage.unknownEmailAdressError()).isEqualTo(unknownEmailAdressText);
+        assertThat(myAccountPage.unknownEmailAdressError()).isEqualTo(unknownEmailAddressText);
     }
 
     @Test
