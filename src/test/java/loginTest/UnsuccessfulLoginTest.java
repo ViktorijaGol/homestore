@@ -1,4 +1,8 @@
+package loginTest;
+
+import bars.HeaderBar;
 import org.junit.jupiter.api.Test;
+import pages.MyAccountPage;
 
 import static org.assertj.core.api.Assertions.*;
 
