@@ -10,8 +10,8 @@ public class AddToCartTest extends BaseTest {
     ShopPage shopPage;
 
     String totalAmountText = "1 item";
-    String itemAmountInTheCart = "1 × £200.00";
     String subtotalSumInTheCart = "£200.00";
+    String itemAmountAndSumInTheCart = "1 × "+subtotalSumInTheCart+"";
 
     @Test
     public void viewCartButtonAppearsAfterAddedToCartTest() {
@@ -44,7 +44,7 @@ public class AddToCartTest extends BaseTest {
 
         shopPage.hoverCartBlock();
         assertThat(shopPage.productTitleVisible()).isEqualTo(shopPage.productTitleInTheShop());
-        assertThat(shopPage.productAmountAndSumVisible()).isEqualTo(itemAmountInTheCart);
+        assertThat(shopPage.productAmountAndSumVisible()).isEqualTo(itemAmountAndSumInTheCart);
         assertThat(shopPage.subtotalSumIsVisible()).isEqualTo(subtotalSumInTheCart);
         assertThat(shopPage.viewCartButtonIsVisible()).isTrue();
         assertThat(shopPage.checkoutButtonIsVisible()).isTrue();

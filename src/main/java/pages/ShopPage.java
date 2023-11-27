@@ -44,7 +44,6 @@ public class ShopPage extends BasePage{
     WebElement viewCartButtonAppeared;
     public boolean viewCartButton() { return viewCartButtonAppeared.isDisplayed();
     }
-
     public WebElement getElement() {
         return viewCartButtonAppeared;
     }
@@ -71,7 +70,6 @@ public class ShopPage extends BasePage{
         Actions hover = new Actions(driver);
         hover.moveToElement(cartBlock).perform();
     }
-
     public void clickCartBlock() { cartBlock.click();
     }
 

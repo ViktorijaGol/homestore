@@ -11,7 +11,9 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://themes.woocommerce.com/homestore/shop/");
     }
