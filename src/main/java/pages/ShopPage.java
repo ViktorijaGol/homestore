@@ -103,4 +103,8 @@ public class ShopPage extends BasePage{
     WebElement checkoutButtonInTheCartBlock;
     public boolean checkoutButtonIsVisible() { return checkoutButtonInTheCartBlock.isDisplayed();
     }
+
+    @FindBy(css = "a[title='View cart']")
+    WebElement viewCartButton;
+    public void clickNavigateToCart() { viewCartButton.click(); }
 }

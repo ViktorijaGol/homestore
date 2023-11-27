@@ -29,3 +29,7 @@ Y
 )src/test/java/addToCartTest/BaseTest.java,7/c/7c533ba07f3debd0402b1094fe2ac9990735367d
 ^
 .src/test/java/addToCartTest/AddToCartTest.java,6/4/64ac42ce23c1ffe7e77e4a1c7131a2ec2be2b102
+s
+Csrc/test/java/addToCartTest/AddToCartAndNavigateToCartPageTest.java,a/1/a1c648fa9025190ea33af8c9a8047d02036ce590
+Q
+!src/main/java/pages/CartPage.java,4/9/49d21e14bc0349d2256e737eacde89e121bf0432
