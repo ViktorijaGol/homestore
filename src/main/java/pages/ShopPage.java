@@ -47,4 +47,20 @@ public class ShopPage extends BasePage{
     public WebElement getElement() {
         return viewCartButtonAppeared;
     }
+
+    @FindBy(css = "a[title='View your shopping cart'] span[class='woocommerce-Price-amount amount']")
+    WebElement totalSum;
+    public String totalSumIsUpdated() { return totalSum.getText();
+    }
+
+    @FindBy(xpath = "//a[@href='https://themes.woocommerce.com/homestore/product/classic-tv-stand/']" +
+            "//span[@class='price']//span[@class='woocommerce-Price-amount amount']")
+    WebElement productPrice;
+    public String productPrice() { return productPrice.getText();
+    }
+
+    @FindBy(xpath = "//span[normalize-space()='1 item']")
+    WebElement itemsInTheCart;
+    public String itemAmountUpdated() { return  itemsInTheCart.getText();
+    }
 }
