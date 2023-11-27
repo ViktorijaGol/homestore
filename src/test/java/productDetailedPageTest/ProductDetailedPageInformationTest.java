@@ -11,6 +11,7 @@ public class ProductDetailedPageInformationTest extends BaseTest {
     ProductDetailedPage productDetailedPage;
 
     String productTitle = "Classic TV stand";
+//    String amountLarge = "14";
 
     @Test
     public void productDetailedPageContainsAllRequestedInformationTest() {
@@ -24,4 +25,17 @@ public class ProductDetailedPageInformationTest extends BaseTest {
         assertThat(productDetailedPage.productDescriptionVisible()).isTrue();
         assertThat(productDetailedPage.productCategoryVisible());
     }
+
+    @Test
+    public void userChooseProductAmountByEnteringNumbersTest() {
+        shopPage = new ShopPage(driver);
+        productDetailedPage = new ProductDetailedPage(driver);
+
+        shopPage.clickOnProduct();
+        assertThat(productDetailedPage.productTitle()).isEqualTo(productTitle);
+
+        productDetailedPage.chooseAmount();
+//        productDetailedPage.enterAmount();
+    }
 }
+

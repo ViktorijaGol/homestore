@@ -15,7 +15,7 @@ public class BaseTest {
         driver.get("https://themes.woocommerce.com/homestore/shop/");
     }
 
-    @AfterEach
-    public void closeBrowser() { driver.close(); }
+//    @AfterEach
+//    public void closeBrowser() { driver.close(); }
 }
 

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,4 +28,14 @@ public class ProductDetailedPage extends BasePage{
     WebElement productCategory;
     public boolean productCategoryVisible() { return productCategory.isDisplayed();
     }
+
+    @FindBy(css = "div[class='quantity']")
+    WebElement amountOfProductsNumber;
+    public void chooseAmount() {
+        amountOfProductsNumber.click();
+    }
+//    public void enterAmount() {
+//        amountOfProductsNumber.clear();
+//        amountOfProductsNumber.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), "14");
+//    }
 }
