@@ -72,6 +72,9 @@ public class ShopPage extends BasePage{
         hover.moveToElement(cartBlock).perform();
     }
 
+    public void clickCartBlock() { cartBlock.click();
+    }
+
     @FindBy(css = "header[id='masthead'] " +
             "ul[class='woocommerce-mini-cart cart_list product_list_widget '] a:nth-child(2)")
     WebElement productTitleInCartBlock;

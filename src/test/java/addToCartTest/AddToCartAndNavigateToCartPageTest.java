@@ -22,7 +22,17 @@ public class AddToCartAndNavigateToCartPageTest extends BaseTest {
 
         WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
         shopPage.clickNavigateToCart();
+        assertThat(cartPage.cartDisplayed()).isTrue();
+    }
 
+    @Test
+    public void addToCartClickCartInformationBlockNavigateToCartTest() {
+        shopPage = new ShopPage(driver);
+        cartPage = new CartPage(driver);
+
+        shopPage.addProductToCart();
+
+        shopPage.clickCartBlock();
         assertThat(cartPage.cartDisplayed()).isTrue();
     }
 }

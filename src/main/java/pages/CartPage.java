@@ -12,3 +12,4 @@ public class CartPage extends BasePage{
     public boolean cartDisplayed() { return cartPage.isDisplayed();
     }
 }
+
