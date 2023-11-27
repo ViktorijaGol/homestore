@@ -108,4 +108,12 @@ public class ShopPage extends BasePage{
     @FindBy(css = "a[title='View cart']")
     WebElement viewCartButton;
     public void clickNavigateToCart() { viewCartButton.click(); }
+
+
+    @FindBy(css = "li[class='product type-product post-107 " +
+            "status-publish instock product_cat-living-room has-post-thumbnail shipping-taxable " +
+            "purchasable product-type-simple'] a[class='woocommerce-LoopProduct-link woocommerce-loop-product__link']")
+    WebElement productPost;
+    public void clickOnProduct() { productPost.click();
+    }
 }

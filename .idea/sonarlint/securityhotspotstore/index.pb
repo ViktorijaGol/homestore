@@ -33,3 +33,13 @@ s
 Csrc/test/java/addToCartTest/AddToCartAndNavigateToCartPageTest.java,a/1/a1c648fa9025190ea33af8c9a8047d02036ce590
 Q
 !src/main/java/pages/CartPage.java,4/9/49d21e14bc0349d2256e737eacde89e121bf0432
+Z
+*src/test/java/productDetailedPageTest.java,9/c/9ce2441d90c4f2ec8190be7963107fccfa260a69
+a
+1src/test/java/productDeletePageTest/BaseTest.java,9/c/9c5a228f092eef9e4a469feb1a70d700207c4004
+c
+3src/test/java/productDetailedPageTest/BaseTest.java,6/2/62e9beefd5a390e6ee7d9ace5d6e398b1095053d
+}
+Msrc/test/java/productDetailedPageTest/ProductDetailedPageInformationTest.java,2/a/2a72e33a51835a181c555ce87e2d9de299e9b760
+\
+,src/main/java/pages/ProductDetailedPage.java,f/d/fd592cd2384e7a7c77e541ebc34aa9a010ca38b5
