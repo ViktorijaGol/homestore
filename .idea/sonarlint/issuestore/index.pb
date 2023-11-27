@@ -1,30 +1,10 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-K
-src/main/java/BasePage.java,3/4/34bd91b93ff8e4c77a53e229d8349a9057fa291a
-K
-src/main/java/HomePage.java,d/f/df0ab0748032f15b3773c9b421a6bb6e9a56e67e
-P
- src/main/java/MyAccountPage.java,c/5/c5ea0bce426d072346791810f2b3c3a6a87392d3
-S
-#src/main/java/LostPasswordPage.java,6/2/62b9e01df9eeaba5a172ad6fb5d3ef5ec7fc1748
-K
-src/test/java/BaseTest.java,4/3/43e9f450cc1d05e1c35b5c2fa4533e9611ac1276
-L
-src/test/java/LoginTest.java,d/6/d6cd1323b46eaeae5c5e2a440f39a3d610dabf0d
-L
-src/main/java/HeaderBar.java,8/9/8958972822eb2ee6bb8d15e064c7f349e6b380f9
-X
-(src/test/java/UnsuccessfulLoginTest.java,1/3/137ea70b3d17af16c1bc6c7476347f56c4b9fca1
-c
-3src/test/java/UnssucessfulPasswordRecoveryTest.java,1/3/139937494ed5538845c2330915498567ba64f00b
 R
 "src/main/java/utils/WaitUtils.java,2/8/284f6fef47cc69aa427e09532da8494aeb0413d6
 Q
 !src/main/java/pages/BasePage.java,e/2/e2e13e66e55a179dc9c969979a2c5c7949318f67
-Q
-!src/main/java/pages/HomePage.java,9/6/9655b2a35fae75d92697b79cda62632f93f33e6e
 Y
 )src/main/java/pages/LostPasswordPage.java,b/3/b3f572b4552c6910b233c8810c3811d16c6ccfc5
 V
@@ -33,8 +13,6 @@ Q
 !src/main/java/bars/HeaderBar.java,8/f/8f56105f91526f218207e9c013cf1c9e14ca48f6
 b
 2src/test/java/loginTest/UnsuccessfulLoginTest.java,4/6/4687f7d6f9dad3207570f3e42916385522a53521
-m
-=src/test/java/loginTest/UnssucessfulPasswordRecoveryTest.java,6/0/6032249189043e87fead11e9283c03250b66bfd9
 U
 %src/test/java/loginTest/BaseTest.java,3/9/39792d841df1424b1e5fd8de9d4f926cf3da485d
 m
@@ -45,7 +23,5 @@ j
 :src/test/java/shopPageTest/ProductPagesNavigationTest.java,3/7/379112b37446c872238e42391c76239db62c7c7c
 Q
 !src/main/java/pages/ShopPage.java,4/1/419727939f635e94b3ed8ac94f3a5ef3731022e7
-R
-"src/main/java/pages/ShopPage2.java,2/0/203a97ec0f27b4218bab71d74f7dd3194f071295
 a
 1src/test/java/shopPageTest/ProductSearchTest.java,5/a/5a1a1d4f9a331b6f788d162b105ca27e4b9d4354

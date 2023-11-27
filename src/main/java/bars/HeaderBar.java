@@ -21,4 +21,6 @@ public class HeaderBar extends BasePage {
     public void typeNonExistingProductName(String nonExistingProductName) {
         searchBarTop.sendKeys(nonExistingProductName, Keys.ENTER);
     }
+    public void clickSearchWhenLeftEmpty() { searchBarTop.sendKeys(Keys.ENTER);
+    }
 }
