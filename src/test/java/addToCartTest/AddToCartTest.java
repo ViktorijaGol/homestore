@@ -1,6 +1,5 @@
 package addToCartTest;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pages.ShopPage;
 import utils.WaitUtils;
@@ -11,6 +10,8 @@ public class AddToCartTest extends BaseTest {
     ShopPage shopPage;
 
     String totalAmountText = "1 item";
+    String itemAmountInTheCart = "1 × £200.00";
+    String subtotalSumInTheCart = "£200.00";
 
     @Test
     public void viewCartButtonAppearsAfterAddedToCartTest() {
@@ -31,5 +32,21 @@ public class AddToCartTest extends BaseTest {
         WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
         assertThat(shopPage.totalSumIsUpdated()).isEqualTo(shopPage.productPrice());
         assertThat(shopPage.itemAmountUpdated()).isEqualTo(totalAmountText);
+    }
+
+    @Test
+    public void informationInTopCartBlockDisplayed() {
+        shopPage = new ShopPage(driver);
+
+        shopPage.addProductToCart();
+
+        WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
+
+        shopPage.hoverCartBlock();
+        assertThat(shopPage.productTitleVisible()).isEqualTo(shopPage.productTitleInTheShop());
+        assertThat(shopPage.productAmountAndSumVisible()).isEqualTo(itemAmountInTheCart);
+        assertThat(shopPage.subtotalSumIsVisible()).isEqualTo(subtotalSumInTheCart);
+        assertThat(shopPage.viewCartButtonIsVisible()).isTrue();
+        assertThat(shopPage.checkoutButtonIsVisible()).isTrue();
     }
 }

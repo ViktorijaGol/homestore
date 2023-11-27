@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class ShopPage extends BasePage{
@@ -62,5 +63,44 @@ public class ShopPage extends BasePage{
     @FindBy(xpath = "//span[normalize-space()='1 item']")
     WebElement itemsInTheCart;
     public String itemAmountUpdated() { return  itemsInTheCart.getText();
+    }
+
+    @FindBy(css = "#site-header-cart")
+    WebElement cartBlock;
+    public void hoverCartBlock() {
+        Actions hover = new Actions(driver);
+        hover.moveToElement(cartBlock).perform();
+    }
+
+    @FindBy(css = "header[id='masthead'] " +
+            "ul[class='woocommerce-mini-cart cart_list product_list_widget '] a:nth-child(2)")
+    WebElement productTitleInCartBlock;
+    public String productTitleVisible() { return productTitleInCartBlock.getText();
+    }
+
+    @FindBy(xpath = "//h2[normalize-space()='Classic TV stand']")
+    WebElement productTitleShopPage;
+    public String productTitleInTheShop() { return productTitleShopPage.getText();
+    }
+
+    @FindBy(css = "ul[id='site-header-cart'] span[class='quantity']")
+    WebElement productCountAndSumCartBlock;
+    public String productAmountAndSumVisible() { return productCountAndSumCartBlock.getText();
+    }
+
+    @FindBy(css = "ul[id='site-header-cart'] p[class='woocommerce-mini-cart__total total'] " +
+            "span[class='woocommerce-Price-amount amount']")
+    WebElement subtotalSum;
+    public String subtotalSumIsVisible() { return subtotalSum.getText();
+    }
+
+    @FindBy(css = "ul[id='site-header-cart'] a[class='button wc-forward wp-element-button']")
+    WebElement viewCartButtonInTheCartBlock;
+    public boolean viewCartButtonIsVisible() { return viewCartButtonInTheCartBlock.isDisplayed();
+    }
+
+    @FindBy(css = "ul[id='site-header-cart'] a[class='button checkout wc-forward wp-element-button']")
+    WebElement checkoutButtonInTheCartBlock;
+    public boolean checkoutButtonIsVisible() { return checkoutButtonInTheCartBlock.isDisplayed();
     }
 }
