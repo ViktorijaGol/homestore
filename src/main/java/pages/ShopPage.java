@@ -35,4 +35,16 @@ public class ShopPage extends BasePage{
     WebElement resultCountParagraph;
     public String resultsCount() { return resultCountParagraph.getText(); }
 
+    @FindBy(css = "a[aria-label='Add “Classic TV stand” to your cart']")
+    WebElement addTvStandToCart;
+    public void addProductToCart() { addTvStandToCart.click(); }
+
+    @FindBy(css = "a[title='View cart']")
+    WebElement viewCartButtonAppeared;
+    public boolean viewCartButton() { return viewCartButtonAppeared.isDisplayed();
+    }
+
+    public WebElement getElement() {
+        return viewCartButtonAppeared;
+    }
 }
