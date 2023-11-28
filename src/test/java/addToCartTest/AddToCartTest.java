@@ -24,7 +24,7 @@ public class AddToCartTest extends BaseTest {
     }
 
     @Test
-    public void whenProductAddedToCartInformationInCartBlockAtTheTopUpdated() {
+    public void whenProductAddedToCartInformationInCartBlockAtTheTopUpdated() { //merge the last two tests into one
         shopPage = new ShopPage(driver);
 
         shopPage.addProductToCart();
