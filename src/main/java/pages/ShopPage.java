@@ -36,9 +36,9 @@ public class ShopPage extends BasePage{
     WebElement resultCountParagraph;
     public String resultsCount() { return resultCountParagraph.getText(); }
 
-    @FindBy(css = "a[aria-label='Add “Classic TV stand” to your cart']")
-    WebElement addTvStandToCart;
-    public void addProductToCart() { addTvStandToCart.click(); }
+    @FindBy(xpath = "(//ul[@class='products columns-4'])//li[2]//a[2]")
+    WebElement addOneProductToCart;
+    public void addProductToCart() { addOneProductToCart.click(); }
 
     @FindBy(css = "a[title='View cart']")
     WebElement viewCartButtonAppeared;
@@ -53,13 +53,12 @@ public class ShopPage extends BasePage{
     public String totalSumIsUpdated() { return totalSum.getText();
     }
 
-    @FindBy(xpath = "//a[@href='https://themes.woocommerce.com/homestore/product/classic-tv-stand/']" +
-            "//span[@class='price']//span[@class='woocommerce-Price-amount amount']")
+    @FindBy(xpath = "(//ul[@class='products columns-4'])//li[2]//span[@class='price']")
     WebElement productPrice;
     public String productPrice() { return productPrice.getText();
     }
 
-    @FindBy(xpath = "//span[normalize-space()='1 item']")
+    @FindBy(xpath = "//span[text()='1 item']")
     WebElement itemsInTheCart;
     public String itemAmountUpdated() { return  itemsInTheCart.getText();
     }

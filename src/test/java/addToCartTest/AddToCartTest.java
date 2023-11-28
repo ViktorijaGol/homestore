@@ -18,21 +18,10 @@ public class AddToCartTest extends BaseTest {
     public void viewCartButtonAppearsAfterAddedToCartTest() {
         shopPage = new ShopPage(driver);
 
-        shopPage.addProductToCart(); //pamastymui, add to cart produktas galetu buti ne statine reiksme , o kazkelintas tiesiog
-
-        WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
-        assertThat(shopPage.viewCartButton()).isTrue();
-    }
-
-    @Test
-    public void whenProductAddedToCartInformationInCartBlockAtTheTopUpdated() { //merge the last two tests into one
-        shopPage = new ShopPage(driver);
-
         shopPage.addProductToCart();
 
         WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
-        assertThat(shopPage.totalSumIsUpdated()).isEqualTo(shopPage.productPrice());
-        assertThat(shopPage.itemAmountUpdated()).isEqualTo(totalAmountText);
+        assertThat(shopPage.viewCartButton()).isTrue();
     }
 
     @Test
@@ -42,8 +31,10 @@ public class AddToCartTest extends BaseTest {
         shopPage.addProductToCart();
 
         WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
+        assertThat(shopPage.totalSumIsUpdated()).isEqualTo(shopPage.productPrice());
+        assertThat(shopPage.itemAmountUpdated()).isEqualTo(totalAmountText);
 
-        shopPage.hoverCartBlock();
+        shopPage.hoverCartBlock(); //iki cia sutvarkyta
         assertThat(shopPage.productTitleVisible()).isEqualTo(shopPage.productTitleInTheShop());
         assertThat(shopPage.productAmountAndSumVisible()).isEqualTo(itemAmountAndSumInTheCart);
         assertThat(shopPage.subtotalSumIsVisible()).isEqualTo(subtotalSumInTheCart);
