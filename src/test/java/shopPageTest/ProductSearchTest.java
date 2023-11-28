@@ -1,7 +1,6 @@
 package shopPageTest;
 
 import bars.HeaderBar;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pages.ShopPage;
 import base.BaseTest;

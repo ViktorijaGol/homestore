@@ -13,7 +13,7 @@ public class HeaderBar extends BasePage {
     WebElement myAccountLink;
     public void clickMyAccount() { myAccountLink.click(); }
 
-    @FindBy(css = "#woocommerce-product-search-field-0")
+    @FindBy(xpath = "//input[@type='search']")
     WebElement searchBarTop;
     public void typeExistingProductName(String existingProductName) {
         searchBarTop.sendKeys(existingProductName, Keys.ENTER);

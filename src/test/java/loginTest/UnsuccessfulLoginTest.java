@@ -2,6 +2,7 @@ package loginTest;
 
 import bars.HeaderBar;
 import base.BaseTest;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pages.MyAccountPage;
 
