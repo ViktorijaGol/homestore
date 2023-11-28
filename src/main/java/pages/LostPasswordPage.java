@@ -15,8 +15,8 @@ public class LostPasswordPage extends BasePage {
 
     @FindBy(css = "ul[role='alert']")
     WebElement lostPasswordPageAlert;
-    public String invalidUsernameOrEmailError() { return lostPasswordPageAlert.getText(); }
-    public String enterUsernameOrEmailError() { return lostPasswordPageAlert.getText(); }
+    public String invalidUsernameOrEmailError() { return lostPasswordPageAlert.getText(); } 
+    public String enterUsernameOrEmailError() { return lostPasswordPageAlert.getText(); } //code repeats
 
     @FindBy(css = "button[value='Reset password']")
     WebElement resetPasswordButton;
