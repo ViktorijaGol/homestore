@@ -39,7 +39,7 @@ public class UnsuccessfulPasswordRecoveryTest extends BaseTest {
     }
 
     @Test
-    public void unableToRecoverPasswordWithInvalidEmailTest() {
+    public void unableToRecoverPasswordWithInvalidEmailTest() { //why it is not parametrized????
         myAccountPage = new MyAccountPage(driver);
         headerBar = new HeaderBar(driver);
         lostPasswordPage = new LostPasswordPage(driver);
@@ -48,7 +48,7 @@ public class UnsuccessfulPasswordRecoveryTest extends BaseTest {
 
         myAccountPage.clickLostYourPassword();
 
-        lostPasswordPage.fillEmail(email);
+        lostPasswordPage.fillEmail(email); //same as fillUsername
         lostPasswordPage.clickResetPassword();
         assertTrue(
                 (lostPasswordPage.invalidUsernameOrEmailError()).equals(invalidUsernameOrEmailErrorText)
