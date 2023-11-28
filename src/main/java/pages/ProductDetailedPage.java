@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 public class ProductDetailedPage extends BasePage{
     public ProductDetailedPage(WebDriver driver) { super(driver); }
 
-
     @FindBy(css = ".product_title.entry-title")
     WebElement productDetailedPageTitle;
     public String productTitle() { return productDetailedPageTitle.getText();
@@ -29,13 +28,33 @@ public class ProductDetailedPage extends BasePage{
     public boolean productCategoryVisible() { return productCategory.isDisplayed();
     }
 
-    @FindBy(css = "div[class='quantity']")
+    @FindBy(xpath = "//div[@class='quantity']/input")
     WebElement amountOfProductsNumber;
-    public void chooseAmount() {
+    public void chooseAmount(String amountLarge) {
         amountOfProductsNumber.click();
+        amountOfProductsNumber.clear();
+        amountOfProductsNumber.sendKeys(amountLarge);
     }
-//    public void enterAmount() {
-//        amountOfProductsNumber.clear();
-//        amountOfProductsNumber.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), "14");
-//    }
+    public void chooseAmountWithArrows() {
+        amountOfProductsNumber.click();
+        amountOfProductsNumber.sendKeys(Keys.ARROW_UP);
+    }
+    public void leaveAmountEmpty() {
+        amountOfProductsNumber.click();
+        amountOfProductsNumber.clear();
+    }
+    @FindBy(xpath = "//button[normalize-space()='Add to cart']")
+    WebElement addToCartDetailed;
+    public void addToCart() { addToCartDetailed.click();
+    }
+
+    @FindBy(css = "div[role='alert']")
+    WebElement alert;
+    public String addedToCartAssertVisible() { return alert.getText();
+    }
+
+    @FindBy(css = "div[role='alert'] a[class='button wc-forward wp-element-button']")
+    WebElement viewCartButton;
+    public boolean viewCartButtonAppears() { return viewCartButton.isDisplayed();
+    }
 }
