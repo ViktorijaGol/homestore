@@ -17,7 +17,7 @@ public class AddToCartTest extends BaseTest {
     public void viewCartButtonAppearsAfterAddedToCartTest() {
         shopPage = new ShopPage(driver);
 
-        shopPage.addProductToCart();
+        shopPage.addProductToCart(); //pamastymui, add to cart produktas galetu buti ne statine reiksme , o kazkelintas tiesiog
 
         WaitUtils.waitForElementVisibilityHardcoded(driver, shopPage.getElement());
         assertThat(shopPage.viewCartButton()).isTrue();
