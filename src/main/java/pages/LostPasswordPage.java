@@ -10,13 +10,12 @@ public class LostPasswordPage extends BasePage {
 
     @FindBy(css = "#user_login")
     WebElement usernameOrEmailInput;
-    public void fillUsername(String username) { usernameOrEmailInput.sendKeys(username); }
-    public void fillEmail(String email) { usernameOrEmailInput.sendKeys(email); }
+    public void fillUsernameEmailField(String usernameOrEmail) { usernameOrEmailInput.sendKeys(usernameOrEmail); }
 
     @FindBy(css = "ul[role='alert']")
     WebElement lostPasswordPageAlert;
-    public String invalidUsernameOrEmailError() { return lostPasswordPageAlert.getText(); } 
-    public String enterUsernameOrEmailError() { return lostPasswordPageAlert.getText(); } //code repeats
+    public String passwordRecoveryError() { return lostPasswordPageAlert.getText(); }
+
 
     @FindBy(css = "button[value='Reset password']")
     WebElement resetPasswordButton;

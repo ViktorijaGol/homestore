@@ -1,6 +1,7 @@
 package loginTest;
 
 import bars.HeaderBar;
+import base.BaseTest;
 import org.junit.jupiter.api.Test;
 import pages.MyAccountPage;
 
@@ -33,7 +34,7 @@ public class UnsuccessfulLoginTest extends BaseTest {
         myAccountPage.checkRememberMe();
         myAccountPage.clickLogin();
 
-        assertThat(myAccountPage.unknownEmailAdressError()).isEqualTo(unknownEmailAddressText);
+        assertThat(myAccountPage.errorAlert()).isEqualTo(unknownEmailAddressText);
     }
 
     @Test
@@ -49,7 +50,7 @@ public class UnsuccessfulLoginTest extends BaseTest {
         myAccountPage.checkRememberMe();
         myAccountPage.clickLogin();
 
-        assertThat(myAccountPage.unknownUsernameError()).isEqualTo(unknownUsernameText);
+        assertThat(myAccountPage.errorAlert()).isEqualTo(unknownUsernameText);
     }
 
     @Test
@@ -64,7 +65,7 @@ public class UnsuccessfulLoginTest extends BaseTest {
         myAccountPage.checkRememberMe();
         myAccountPage.clickLogin();
 
-        assertThat(myAccountPage.usernameIsRequiredError()).isEqualTo(usernameIsRequiredText);
+        assertThat(myAccountPage.errorAlert()).isEqualTo(usernameIsRequiredText);
     }
 
     @Test
@@ -79,7 +80,7 @@ public class UnsuccessfulLoginTest extends BaseTest {
         myAccountPage.checkRememberMe();
         myAccountPage.clickLogin();
 
-        assertThat(myAccountPage.passwordIsRequiredError()).isEqualTo(passwordIsRequiredText);
+        assertThat(myAccountPage.errorAlert()).isEqualTo(passwordIsRequiredText);
     }
 
     @Test
@@ -92,6 +93,6 @@ public class UnsuccessfulLoginTest extends BaseTest {
         myAccountPage.checkRememberMe();
         myAccountPage.clickLogin();
 
-        assertThat(myAccountPage.usernameIsRequiredError()).isEqualTo(usernameIsRequiredText);
+        assertThat(myAccountPage.errorAlert()).isEqualTo(usernameIsRequiredText);
     }
 }

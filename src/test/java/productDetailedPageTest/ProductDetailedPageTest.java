@@ -3,6 +3,7 @@ package productDetailedPageTest;
 import org.junit.jupiter.api.Test;
 import pages.ProductDetailedPage;
 import pages.ShopPage;
+import base.BaseTest;
 
 import static org.assertj.core.api.Assertions.*;
 

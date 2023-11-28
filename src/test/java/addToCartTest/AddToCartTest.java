@@ -3,6 +3,7 @@ package addToCartTest;
 import org.junit.jupiter.api.Test;
 import pages.ShopPage;
 import utils.WaitUtils;
+import base.BaseTest;
 
 import static org.assertj.core.api.Assertions.*;
 

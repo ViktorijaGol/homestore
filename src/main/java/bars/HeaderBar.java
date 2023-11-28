@@ -9,7 +9,7 @@ import pages.BasePage;
 public class HeaderBar extends BasePage {
     public HeaderBar(WebDriver driver) { super(driver); }
 
-    @FindBy(css = "#menu-item-228")
+    @FindBy(xpath = "//a[text()='My Account']")
     WebElement myAccountLink;
     public void clickMyAccount() { myAccountLink.click(); }
 

@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.BasePage;
 
 public class MyAccountPage extends BasePage {
     public MyAccountPage(WebDriver driver) { super(driver); }
@@ -12,6 +11,7 @@ public class MyAccountPage extends BasePage {
     WebElement usernameOrEmailInput;
     public void fillEmail(String email) { usernameOrEmailInput.sendKeys(email); }
     public void fillUsername(String username) { usernameOrEmailInput.sendKeys(username); }
+
 
     @FindBy(css = "#password")
     WebElement passwordInput;
@@ -27,12 +27,9 @@ public class MyAccountPage extends BasePage {
 
     @FindBy(css = "ul[role='alert']")
     WebElement myAccountPageErrorAlert;
-    public String unknownEmailAdressError() { return myAccountPageErrorAlert.getText(); }
-    public String unknownUsernameError() { return myAccountPageErrorAlert.getText(); }
-    public String usernameIsRequiredError() {  return myAccountPageErrorAlert.getText(); }
-    public String passwordIsRequiredError() { return myAccountPageErrorAlert.getText(); }
+    public String errorAlert() { return myAccountPageErrorAlert.getText(); }
 
-    @FindBy(xpath = "//a[normalize-space()='Lost your password?']")
+    @FindBy(xpath = "//a[text()='Lost your password?']")
     WebElement lostYourPasswordLink;
     public void clickLostYourPassword() { lostYourPasswordLink.click(); }
 }

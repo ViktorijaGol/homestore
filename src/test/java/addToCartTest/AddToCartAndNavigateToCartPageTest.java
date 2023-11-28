@@ -1,10 +1,10 @@
 package addToCartTest;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.ShopPage;
 import utils.WaitUtils;
+import base.BaseTest;
 
 import static org.assertj.core.api.Assertions.*;
 

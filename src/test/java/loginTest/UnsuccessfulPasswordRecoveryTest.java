@@ -1,28 +1,27 @@
 package loginTest;
 
 import bars.HeaderBar;
-import org.junit.jupiter.api.Assertions;
+import base.BaseTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import pages.LostPasswordPage;
 import pages.MyAccountPage;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class UnsuccessfulPasswordRecoveryTest extends BaseTest {
     MyAccountPage myAccountPage;
     HeaderBar headerBar;
     LostPasswordPage lostPasswordPage;
-
-    String username = "katinukai123";
-    String email = "katinukai@gmail.com";
     String invalidUsernameOrEmailErrorText = "Invalid username or email.";
     String enterUsernameOrEmailErrorText = "Enter a username or email address.";
     String passwordResetLimitExceededText =
             "You have exceeded the password reset limit. Please wait a few minutes and try again.";
-
-    @Test
-    public void unableToRecoverPasswordWithInvalidUsernameTest() {
+    @ParameterizedTest
+    @ValueSource(strings = {"katinukai123", "katinukai@gmail.com"})
+    public void unableToRecoverPasswordWithInvalidCredentialTest(String usernameOrEmail) {
         myAccountPage = new MyAccountPage(driver);
         headerBar = new HeaderBar(driver);
         lostPasswordPage = new LostPasswordPage(driver);
@@ -31,28 +30,11 @@ public class UnsuccessfulPasswordRecoveryTest extends BaseTest {
 
         myAccountPage.clickLostYourPassword();
 
-        lostPasswordPage.fillUsername(username);
+        lostPasswordPage.fillUsernameEmailField(usernameOrEmail);
         lostPasswordPage.clickResetPassword();
         assertTrue(
-                (lostPasswordPage.invalidUsernameOrEmailError()).equals(invalidUsernameOrEmailErrorText)
-                        || (lostPasswordPage.invalidUsernameOrEmailError()).equals(passwordResetLimitExceededText));
-    }
-
-    @Test
-    public void unableToRecoverPasswordWithInvalidEmailTest() { //why it is not parametrized????
-        myAccountPage = new MyAccountPage(driver);
-        headerBar = new HeaderBar(driver);
-        lostPasswordPage = new LostPasswordPage(driver);
-
-        headerBar.clickMyAccount();
-
-        myAccountPage.clickLostYourPassword();
-
-        lostPasswordPage.fillEmail(email); //same as fillUsername
-        lostPasswordPage.clickResetPassword();
-        assertTrue(
-                (lostPasswordPage.invalidUsernameOrEmailError()).equals(invalidUsernameOrEmailErrorText)
-                        || (lostPasswordPage.invalidUsernameOrEmailError()).equals(passwordResetLimitExceededText));
+                (lostPasswordPage.passwordRecoveryError()).equals(invalidUsernameOrEmailErrorText)
+                        || (lostPasswordPage.passwordRecoveryError()).equals(passwordResetLimitExceededText));
     }
 
     @Test
@@ -66,6 +48,6 @@ public class UnsuccessfulPasswordRecoveryTest extends BaseTest {
         myAccountPage.clickLostYourPassword();
 
         lostPasswordPage.clickResetPassword();
-        assertThat(lostPasswordPage.enterUsernameOrEmailError()).isEqualTo(enterUsernameOrEmailErrorText);
+        assertThat(lostPasswordPage.passwordRecoveryError()).isEqualTo(enterUsernameOrEmailErrorText);
     }
 }
