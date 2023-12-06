@@ -11,5 +11,10 @@ public class CartPage extends BasePage{
     WebElement cartPage;
     public boolean cartDisplayed() { return cartPage.isDisplayed();
     }
+
+    @FindBy(xpath = "//a[normalize-space()='Proceed to checkout']")
+    WebElement proceedToCheckoutButton;
+    public void proceedToCheckout() { proceedToCheckoutButton.click();
+    }
 }
 
