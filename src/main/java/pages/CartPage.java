@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class CartPage extends BasePage{
     public CartPage(WebDriver driver) { super(driver); }
 
-    @FindBy(xpath = "//h1[normalize-space()='Cart']")
+    @FindBy(xpath = "//h1[text()='Cart']")
     WebElement cartPage;
     public boolean cartDisplayed() { return cartPage.isDisplayed();
     }

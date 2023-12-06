@@ -34,7 +34,7 @@ public class AddToCartTest extends BaseTest {
         assertThat(shopPage.totalSumIsUpdated()).isEqualTo(shopPage.productPrice());
         assertThat(shopPage.itemAmountUpdated()).isEqualTo(totalAmountText);
 
-        shopPage.hoverCartBlock(); //iki cia sutvarkyta
+        shopPage.hoverCartBlock();
         assertThat(shopPage.productTitleVisible()).isEqualTo(shopPage.productTitleInTheShop());
         assertThat(shopPage.productAmountAndSumVisible()).isEqualTo(itemAmountAndSumInTheCart);
         assertThat(shopPage.subtotalSumIsVisible()).isEqualTo(subtotalSumInTheCart);

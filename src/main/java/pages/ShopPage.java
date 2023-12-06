@@ -47,6 +47,7 @@ public class ShopPage extends BasePage{
     public WebElement getElement() {
         return viewCartButtonAppeared;
     }
+    public void clickNavigateToCart() { viewCartButtonAppeared.click(); }
 
     @FindBy(css = "a[title='View your shopping cart'] span[class='woocommerce-Price-amount amount']")
     WebElement totalSum;
@@ -72,13 +73,12 @@ public class ShopPage extends BasePage{
     public void clickCartBlock() { cartBlock.click();
     }
 
-    @FindBy(css = "header[id='masthead'] " +
-            "ul[class='woocommerce-mini-cart cart_list product_list_widget '] a:nth-child(2)")
+    @FindBy(xpath = "(//li[@class='woocommerce-mini-cart-item mini_cart_item'])[1]//a[2]")
     WebElement productTitleInCartBlock;
     public String productTitleVisible() { return productTitleInCartBlock.getText();
     }
 
-    @FindBy(xpath = "//h2[normalize-space()='Classic TV stand']")
+    @FindBy(xpath = "(//ul[@class='products columns-4'])//li[2]//h2")
     WebElement productTitleShopPage;
     public String productTitleInTheShop() { return productTitleShopPage.getText();
     }
@@ -88,8 +88,7 @@ public class ShopPage extends BasePage{
     public String productAmountAndSumVisible() { return productCountAndSumCartBlock.getText();
     }
 
-    @FindBy(css = "ul[id='site-header-cart'] p[class='woocommerce-mini-cart__total total'] " +
-            "span[class='woocommerce-Price-amount amount']")
+    @FindBy(xpath = "//ul[@id='site-header-cart']//p[@class=\"woocommerce-mini-cart__total total\"]//bdi[1]")
     WebElement subtotalSum;
     public String subtotalSumIsVisible() { return subtotalSum.getText();
     }
@@ -103,11 +102,6 @@ public class ShopPage extends BasePage{
     WebElement checkoutButtonInTheCartBlock;
     public boolean checkoutButtonIsVisible() { return checkoutButtonInTheCartBlock.isDisplayed();
     }
-
-    @FindBy(css = "a[title='View cart']")
-    WebElement viewCartButton;
-    public void clickNavigateToCart() { viewCartButton.click(); }
-
 
     @FindBy(css = "li[class='product type-product post-107 " +
             "status-publish instock product_cat-living-room has-post-thumbnail shipping-taxable " +
