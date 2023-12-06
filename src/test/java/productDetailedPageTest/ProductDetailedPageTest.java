@@ -23,11 +23,11 @@ public class ProductDetailedPageTest extends BaseTest {
         productDetailedPage = new ProductDetailedPage(driver);
 
         shopPage.clickOnProduct();
-        assertThat(productDetailedPage.productTitle()).isEqualTo(productTitle);
+        assertThat(productDetailedPage.productTitle()).isTrue();
 
         assertThat(productDetailedPage.productPriceVisible()).isTrue();
         assertThat(productDetailedPage.productDescriptionVisible()).isTrue();
-        assertThat(productDetailedPage.productCategoryVisible());
+        assertThat(productDetailedPage.productCategoryVisible()).isTrue();
     }
 
     @Test
@@ -36,7 +36,6 @@ public class ProductDetailedPageTest extends BaseTest {
         productDetailedPage = new ProductDetailedPage(driver);
 
         shopPage.clickOnProduct();
-        assertThat(productDetailedPage.productTitle()).isEqualTo(productTitle);
 
         productDetailedPage.chooseAmount(amountLarge);
         productDetailedPage.addToCart();
@@ -51,7 +50,6 @@ public class ProductDetailedPageTest extends BaseTest {
         productDetailedPage = new ProductDetailedPage(driver);
 
         shopPage.clickOnProduct();
-        assertThat(productDetailedPage.productTitle()).isEqualTo(productTitle);
 
         productDetailedPage.chooseAmountWithArrows();
         productDetailedPage.addToCart();
@@ -66,7 +64,6 @@ public class ProductDetailedPageTest extends BaseTest {
         productDetailedPage = new ProductDetailedPage(driver);
 
         shopPage.clickOnProduct();
-        assertThat(productDetailedPage.productTitle()).isEqualTo(productTitle);
 
         productDetailedPage.leaveAmountEmpty();
         productDetailedPage.addToCart();

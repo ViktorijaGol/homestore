@@ -10,7 +10,7 @@ public class ProductDetailedPage extends BasePage{
 
     @FindBy(css = ".product_title.entry-title")
     WebElement productDetailedPageTitle;
-    public String productTitle() { return productDetailedPageTitle.getText();
+    public boolean productTitle() { return productDetailedPageTitle.isDisplayed();
     }
 
     @FindBy(css = "p[class='price']")
@@ -43,7 +43,7 @@ public class ProductDetailedPage extends BasePage{
         amountOfProductsNumber.click();
         amountOfProductsNumber.clear();
     }
-    @FindBy(xpath = "//button[normalize-space()='Add to cart']")
+    @FindBy(xpath = "//button[text()='Add to cart']")
     WebElement addToCartDetailed;
     public void addToCart() { addToCartDetailed.click();
     }

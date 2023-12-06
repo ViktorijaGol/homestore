@@ -82,6 +82,8 @@ public class ShopPage extends BasePage{
     WebElement productTitleShopPage;
     public String productTitleInTheShop() { return productTitleShopPage.getText();
     }
+    public void clickOnProduct() { productTitleShopPage.click();
+    }
 
     @FindBy(css = "ul[id='site-header-cart'] span[class='quantity']")
     WebElement productCountAndSumCartBlock;
@@ -101,12 +103,5 @@ public class ShopPage extends BasePage{
     @FindBy(css = "ul[id='site-header-cart'] a[class='button checkout wc-forward wp-element-button']")
     WebElement checkoutButtonInTheCartBlock;
     public boolean checkoutButtonIsVisible() { return checkoutButtonInTheCartBlock.isDisplayed();
-    }
-
-    @FindBy(css = "li[class='product type-product post-107 " +
-            "status-publish instock product_cat-living-room has-post-thumbnail shipping-taxable " +
-            "purchasable product-type-simple'] a[class='woocommerce-LoopProduct-link woocommerce-loop-product__link']")
-    WebElement productPost;
-    public void clickOnProduct() { productPost.click();
     }
 }
