@@ -33,7 +33,9 @@ P
  src/test/java/base/BaseTest.java,b/7/b7db9501819294794071ed8490857b8ada13054d
 r
 Bsrc/test/java/productDetailedPageTest/ProductDetailedPageTest.java,e/e/ee60e5b6f4706610779c88d145b8ab1a9c83062c
-f
-6src/test/java/checkoutTest/CheckoutPageAccessTest.java,8/a/8a160a6cb8a4f013a44e04b1361dedbb85c0c71c
 U
 %src/main/java/pages/CheckoutPage.java,9/7/971a13c7df9fcbbfaf7afbe1c9cb3eab6077c680
+f
+6src/test/java/checkoutTest/CheckoutPageErrorsTest.java,4/7/4702ae9215dcf6e662ed290b7c6277bb97b47672
+`
+0src/test/java/checkoutTest/CheckoutPageTest.java,c/4/c484e750493ba98d083530bb4ab9ce42ad0b4c45

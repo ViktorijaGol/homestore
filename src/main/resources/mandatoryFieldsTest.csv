@@ -1,0 +1,11 @@
+" ", Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, 48374, +37064830123, viktorija@gmail.com, Billing First name is a required field.
+Viktorija, " ", Lithuania, Griniaus g., Kaunas, Kauno, 48374, +37064830123, viktorija@gmail.com, Billing Last name is a required field.
+Viktorija, Golovinova, Lithuania, " ", Kaunas, Kauno, 48374, +37064830123, viktorija@gmail.com, Billing Street address is a required field.
+Viktorija, Golovinova, Lithuania, Griniaus g., " ", Kauno, 48374, +37064830123, viktorija@gmail.com, Billing Town / City is a required field.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, " ", 48374, +37064830123, viktorija@gmail.com, Billing State / County is a required field.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, " ", +37064830123, viktorija@gmail.com, Billing Postcode / ZIP is a required field.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, 48374, " ", viktorija@gmail.com, Billing Phone is a required field.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, 48374, +37064830123, " ", Billing Email address is a required field.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, 48374, +37064830123, viktorija@gmail.com, Invalid payment method.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, 48374, abcde, viktorija@gmail.com, Billing Phone is not a valid phone number.
+Viktorija, Golovinova, Lithuania, Griniaus g., Kaunas, Kauno, 48374, +37064830123, 123, Invalid billing email address
