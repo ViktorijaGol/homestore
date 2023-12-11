@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,7 +40,9 @@ public class CheckoutPage extends BasePage{
     WebElement placeOrderButton;
     public boolean placeOrderButtonIsDisplayed() { return placeOrderButton.isDisplayed();
     }
-    public void clickPlaceOrder() { placeOrderButton.click();
+    public void clickPlaceOrder() {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", placeOrderButton);
     }
 
     @FindBy(css = "#billing_first_name")
@@ -53,8 +56,8 @@ public class CheckoutPage extends BasePage{
     }
 
     @FindBy(css = "#billing_address_1")
-    WebElement streetAdressField;
-    public void fillStreetAdress(String adress) { streetAdressField.sendKeys(adress);
+    WebElement streetAddressField;
+    public void fillStreetAddress(String address) { streetAddressField.sendKeys(address);
     }
 
     @FindBy(css = "#billing_city")

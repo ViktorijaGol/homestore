@@ -13,7 +13,7 @@ public class BaseTest {
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://themes.woocommerce.com/homestore/shop/");
     }

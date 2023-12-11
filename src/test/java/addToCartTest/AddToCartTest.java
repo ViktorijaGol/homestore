@@ -10,10 +10,6 @@ import static org.assertj.core.api.Assertions.*;
 public class AddToCartTest extends BaseTest {
     ShopPage shopPage;
 
-    String totalAmountText = "1 item";
-    String subtotalSumInTheCart = "£200.00";
-    String itemAmountAndSumInTheCart = "1 × "+subtotalSumInTheCart+"";
-
     @Test
     public void viewCartButtonAppearsAfterAddedToCartTest() {
         shopPage = new ShopPage(driver);
@@ -27,6 +23,10 @@ public class AddToCartTest extends BaseTest {
     @Test
     public void informationInTopCartBlockDisplayed() {
         shopPage = new ShopPage(driver);
+
+        String totalAmountText = "1 item";
+        String subtotalSumInTheCart = "£200.00";
+        String itemAmountAndSumInTheCart = "1 × "+subtotalSumInTheCart+"";
 
         shopPage.addProductToCart();
 

@@ -9,8 +9,7 @@ public class MyAccountPage extends BasePage {
 
     @FindBy(css = "#username")
     WebElement usernameOrEmailInput;
-    public void fillEmail(String email) { usernameOrEmailInput.sendKeys(email); }
-    public void fillUsername(String username) { usernameOrEmailInput.sendKeys(username); }
+    public void fillEmailUsernameField(String usernameEmail) { usernameOrEmailInput.sendKeys(usernameEmail); }
 
 
     @FindBy(css = "#password")

@@ -42,8 +42,7 @@ public class ShopPage extends BasePage{
 
     @FindBy(css = "a[title='View cart']")
     WebElement viewCartButtonAppeared;
-    public boolean viewCartButton() { return viewCartButtonAppeared.isDisplayed();
-    }
+    public boolean viewCartButton() { return viewCartButtonAppeared.isDisplayed(); }
     public WebElement getElement() {
         return viewCartButtonAppeared;
     }
