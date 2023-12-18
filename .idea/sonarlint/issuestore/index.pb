@@ -39,3 +39,5 @@ f
 6src/test/java/checkoutTest/CheckoutPageErrorsTest.java,4/7/4702ae9215dcf6e662ed290b7c6277bb97b47672
 `
 0src/test/java/checkoutTest/CheckoutPageTest.java,c/4/c484e750493ba98d083530bb4ab9ce42ad0b4c45
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
