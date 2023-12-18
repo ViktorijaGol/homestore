@@ -54,7 +54,7 @@ Tests are structured using **POM (Page Object Model)**, allowing for easy readab
 
 ## Contributors
 
-- Viktorija Golovinova (@ViktorijaGol)
+- Viktorija Golovinova [(@ViktorijaGol)](https://github.com/ViktorijaGol)
 
 ## Acknowledgments
 
